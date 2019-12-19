@@ -1,0 +1,183 @@
+<html>
+    <head>
+      <!--Import Google Icon Font-->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+      <link rel="stylesheet" type="text/css" href="work.css">
+
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+	</head>
+
+    <body>
+
+      <!--JavaScript at end of body for optimized loading-->
+      <script type="text/javascript" src="js/materialize.min.js"></script>
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+
+<script>
+
+    (function ($) {
+      $(document).ready(function() {
+    
+        $(document).on('click.card', '.card', function (e) {
+          if ($(this).find('> .card-reveal').length) {
+            if ($(e.target).is($('.card-reveal .card-title')) || $(e.target).is($('.card-reveal .card-title i'))) {
+              // Make Reveal animate down and display none
+              $(this).find('.card-reveal').velocity(
+                {translateY: 0}, {
+                  duration: 225,
+                  queue: false,
+                  easing: 'easeInOutQuad',
+                  complete: function() { $(this).css({ display: 'none'}); }
+                }
+              );
+              $(this).find('.card-content>span').attr('style', '');
+            }
+            else if ($(e.target).is($('.card .activator')) ||
+                     $(e.target).is($('.card .activator i')) ) {
+              $(e.target).closest('.card').css('overflow', 'hidden');
+              $(this).find('.card-reveal').css({ display: 'block'}).velocity("stop", false).velocity({translateY: '-100%'}, {duration: 300, queue: false, easing: 'easeInOutQuad'});
+              $(this).find('.card-content>span').attr('style', 'color: rgba(0,0,0,0) !important');
+            }
+          }
+    
+          $('.card-reveal').closest('.card').css('overflow', 'hidden');
+    
+        });
+    
+         // Make Reveal animate up and display when mouseenter
+        $(document).on('mouseenter.hover-reveal','.hover-reveal', function (e){
+          $(e.target).closest('.card').css('overflow', 'hidden');
+          $(this).find('.card-content>span').attr('style', 'color: rgba(0,0,0,0) !important');
+          $(this).find('.card-reveal').css({ display: 'block'})
+            .velocity("stop", false)
+            .velocity({translateY: '-100%'},
+            {duration: 300,
+             queue: false,
+             easing: 'easeInOutQuad'});
+        });
+    
+        // Make Reveal animate down and display none when mouseleave
+        $(document).on('mouseleave.hover-reveal','.hover-reveal', function (e){
+          $(this).find('.card-reveal').velocity(
+            {translateY: 0}, {
+              duration: 225,
+              queue: false,
+              easing: 'easeInOutQuad',
+              complete: function() { $(this).css({ display: 'none'}); }
+            }
+          );
+          $(this).find('.card-content>span').attr('style', '');
+        });
+    
+      });
+    }( jQuery ));
+    
+           
+</script>
+
+<div class="row">
+  <div class="col s12 m4 l3" width="304" height="330">
+   
+    <div class="card hover-reveal">
+      <div class="card-image waves-effect waves-block waves-light">
+        <img class="activator" src="data.jpg" height="290">
+      </div>
+     
+      <div class="card-action">
+        <a class="waves-effect waves-light btn" href="tabs.html">Register</a>
+      </div>
+      <div class="card-reveal">
+        <span class="card-title grey-text text-darken-4">Data Analytics<i class="material-icons right">close</i></span>
+        <p>Data analytics is a emerging topic in the 21st century.Kshitij is proud to announce that an interesting workshop is going to be conducted </p>
+      </div>
+    </div>
+   </div>
+   
+
+
+   <div class="col s12 m4 l3" width="304" height="330">
+   
+    <div class="card hover-reveal">
+      <div class="card-image waves-effect waves-block waves-light">
+        <img class="activator" src="data.jpg" height="290">
+      </div>
+     
+      <div class="card-action">
+        <a class="waves-effect waves-light btn" href="tabs.html">Register</a>
+      </div>
+      <div class="card-reveal">
+        <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
+        <p>Here is some more information about this product that is only revealed once hover it.</p><p>Lorem ipsum dolor sit amet, et ius nostro pertinacia, nihil congue temporibus vel cu. Senserit petentium cum te. Ullum inermis quaerendum ex ius, sed nisl insolens te. Eu dicit laoreet sea.
+
+Vix cu scripta definiebas. No sea viris facilisis. An ridens causae oportere per. Eos vero principes ne.
+
+In his offendit accusamus, cu est dicat melius invidunt. At pro legere incorrupte, malis tantas cu sit. Salutandi efficiantur in vis, ea hendrerit forensibus democritum eam, cu quas verterem eum. Offendit appellantur id mea. Dolore vocibus patrioque no mea, pro ei munere torquatos definitionem.
+
+Tota suscipit delectus quo id, per ex moderatius efficiantur, at option propriae complectitur vis. Epicuri tincidunt duo id, tamquam persius mnesarchum duo ex. Eam dictas placerat forensibus in. Semper deseruisse mel ut. Dicat debitis repudiare usu an, vim ex cetero offendit iracundia, error choro ridens at vim. Ex impetus invenire necessitatibus nec.
+
+Vix ad modus incorrupte, his ad tation causae, illum everti mei no. Sit virtute intellegam ea, summo epicuri dissentiunt ad vel. At eam malorum percipitur, ei debet aperiri indoctum cum, tantas omittam ad nam. Eu per erant putent, eu has suas sale.</p>
+      </div>
+    </div>
+   </div>
+   <div class="col s12 m4 l3" width="304" height="330">
+   
+    <div class="card hover-reveal">
+      <div class="card-image waves-effect waves-block waves-light">
+        <img class="activator" src="data.jpg" height="290">
+      </div>
+     
+      <div class="card-action">
+        <a class="waves-effect waves-light btn" href="tabs.html">Register</a>
+      </div>
+      <div class="card-reveal">
+        <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
+        <p>Here is some more information about this product that is only revealed once hover it.</p><p>Lorem ipsum dolor sit amet, et ius nostro pertinacia, nihil congue temporibus vel cu. Senserit petentium cum te. Ullum inermis quaerendum ex ius, sed nisl insolens te. Eu dicit laoreet sea.
+
+Vix cu scripta definiebas. No sea viris facilisis. An ridens causae oportere per. Eos vero principes ne.
+
+In his offendit accusamus, cu est dicat melius invidunt. At pro legere incorrupte, malis tantas cu sit. Salutandi efficiantur in vis, ea hendrerit forensibus democritum eam, cu quas verterem eum. Offendit appellantur id mea. Dolore vocibus patrioque no mea, pro ei munere torquatos definitionem.
+
+Tota suscipit delectus quo id, per ex moderatius efficiantur, at option propriae complectitur vis. Epicuri tincidunt duo id, tamquam persius mnesarchum duo ex. Eam dictas placerat forensibus in. Semper deseruisse mel ut. Dicat debitis repudiare usu an, vim ex cetero offendit iracundia, error choro ridens at vim. Ex impetus invenire necessitatibus nec.
+
+Vix ad modus incorrupte, his ad tation causae, illum everti mei no. Sit virtute intellegam ea, summo epicuri dissentiunt ad vel. At eam malorum percipitur, ei debet aperiri indoctum cum, tantas omittam ad nam. Eu per erant putent, eu has suas sale.</p>
+      </div>
+    </div>
+   </div>
+   <div class="col s12 m4 l3" width="304" height="330">
+   
+    <div class="card hover-reveal">
+      <div class="card-image waves-effect waves-block waves-light">
+        <img class="activator" src="data.jpg" height="290">
+      </div>
+     
+      <div class="card-action">
+        <a class="waves-effect waves-light btn" href="tabs.html">Register</a>
+      </div>
+      <div class="card-reveal">
+        <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
+        <p>Here is some more information about this product that is only revealed once hover it.</p><p>Lorem ipsum dolor sit amet, et ius nostro pertinacia, nihil congue temporibus vel cu. Senserit petentium cum te. Ullum inermis quaerendum ex ius, sed nisl insolens te. Eu dicit laoreet sea.
+
+Vix cu scripta definiebas. No sea viris facilisis. An ridens causae oportere per. Eos vero principes ne.
+
+In his offendit accusamus, cu est dicat melius invidunt. At pro legere incorrupte, malis tantas cu sit. Salutandi efficiantur in vis, ea hendrerit forensibus democritum eam, cu quas verterem eum. Offendit appellantur id mea. Dolore vocibus patrioque no mea, pro ei munere torquatos definitionem.
+
+Tota suscipit delectus quo id, per ex moderatius efficiantur, at option propriae complectitur vis. Epicuri tincidunt duo id, tamquam persius mnesarchum duo ex. Eam dictas placerat forensibus in. Semper deseruisse mel ut. Dicat debitis repudiare usu an, vim ex cetero offendit iracundia, error choro ridens at vim. Ex impetus invenire necessitatibus nec.
+
+Vix ad modus incorrupte, his ad tation causae, illum everti mei no. Sit virtute intellegam ea, summo epicuri dissentiunt ad vel. At eam malorum percipitur, ei debet aperiri indoctum cum, tantas omittam ad nam. Eu per erant putent, eu has suas sale.</p>
+      </div>
+    </div>
+   </div>
+   
+
+   </div>
+ </div>
+   </body>
+   </html>
